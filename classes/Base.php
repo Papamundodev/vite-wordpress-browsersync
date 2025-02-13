@@ -21,14 +21,14 @@ class Base
     public function includeStyles() : void
     {
         add_action('wp_enqueue_scripts', function () {
-            wp_enqueue_style('main', get_template_directory_uri() . '/src/main.css', [], null);
+            wp_enqueue_style('main', get_template_directory_uri() . '/resources/styles/main.css', [], null);
         });
     }   
 
     public function includeScripts() : void
     {
         add_action('wp_enqueue_scripts', function () {
-            wp_enqueue_script('main', get_template_directory_uri() . '/src/main.js', [], null, true);
+            wp_enqueue_script('main', get_template_directory_uri() . '/resources/scripts/main.js', [], null, true);
         });
     }
 

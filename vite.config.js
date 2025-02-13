@@ -2,6 +2,23 @@ import { defineConfig } from 'vite'
 import browserSync from 'vite-plugin-browser-sync'
 
 export default defineConfig({
+  build: {
+    manifest: true,
+    assetsDir: '.',
+    outDir: `dist`,
+    emptyOutDir: true,
+    sourcemap: true,
+    rollupOptions: {
+      input: [
+        'resources/scripts/main.js',
+        'resources/styles/main.css',
+      ],
+      output: {
+        entryFileNames: '[hash].js',
+        assetFileNames: '[hash].[ext]',
+      },
+    },
+  },
   server: {
     port: 3000,
     strictPort: true
@@ -12,8 +29,8 @@ export default defineConfig({
       port: 3000,
       open: true,
       files: [
-        './src/**/*.css',
-        './src/**/*.js',
+        './resources/**/*.css',
+        './resources/**/*.js',
         './**/*.php'
       ],
       notify: false,

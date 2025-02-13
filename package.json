@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "browser-sync start --proxy 'vite.local' --files 'src/**/*.css, src/**/*.js, **/*.php' --no-open"
+    "dev": "browser-sync start --proxy 'vite.local' --files 'resources/**/*.css, resources/**/*.js, **/*.php' --no-open",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
