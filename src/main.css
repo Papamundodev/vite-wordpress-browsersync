@@ -1,0 +1,7 @@
+/* Vos styles personnalisés ici */
+body {
+  background-color: blue;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  min-height: 100vh;
+} 
